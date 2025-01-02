@@ -135,4 +135,5 @@ summary:hover {
   top: 0;
   width: 100vw;
   z-index: -2;
+	opacity: 0.5;
 }
