@@ -1,9 +1,9 @@
 ---
-const today = new Date();
+const rssURL = new URL('rss.xml', Astro.site);
 ---
 
 <footer>
-	&copy; Jakub Fiala 2024 &mdash; <a href="/impressum.html" lang="de">Impressum</a> &mdash; <a href="/datenschutzerklaerung.html" lang="de">Datenschutzerklärung</a>
+	&copy; Jakub Fiala 2024 &mdash; <a href={rssURL}>RSS</a> &mdash; <a href="https://fiala.space">About</a> &mdash; <a href="https://assemblag.es/@jakub">Mastodon</a> &mdash; <a href="mailto:studio@fiala.space">Contact</a> &mdash; <a href="/impressum.html" lang="de">Impressum</a> &mdash; <a href="/datenschutzerklaerung.html" lang="de">Datenschutzerklärung</a>
 </footer>
 <style>
 	footer {

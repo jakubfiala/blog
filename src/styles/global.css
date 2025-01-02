@@ -1,6 +1,6 @@
 html {
   color: #111;
-  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, P052, serif;
   font-size: 16px;
   padding: 0;
 }
@@ -29,16 +29,18 @@ h1 {
 	font-size: 2em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.8em;
+	margin-top: 3rem;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.5em;
+	margin-top: 3rem;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.3em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1.15em;
 }
 strong,
 b {
@@ -65,25 +67,29 @@ img {
 	height: auto;
 }
 code {
+	font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	font-size: 0.9em;
+	font-weight: normal;
 	padding: 2px 5px;
-	border-radius: 2px;
+	background: #f3f3f3;
 }
 pre {
-	padding: 1.5em;
-	border-radius: 8px;
+	padding: 1rem;
 }
 pre > code {
 	all: unset;
+	font-size: 0.9em;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
+	border-left: 4px solid blue;
+	padding: 0 20px;
+	margin: 2rem 0;
+	font-size: 1.15em;
+	font-style: italic;
 }
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	border-top: 1px solid #f3f3f3;
 }
 @media (max-width: 720px) {
 	body {
@@ -92,6 +98,15 @@ hr {
 	main {
 		padding: 0.5em;
 	}
+}
+
+summary {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+summary:hover {
+	text-decoration: underline;
 }
 
 .sr-only {

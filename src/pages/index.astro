@@ -27,7 +27,7 @@ const posts = (await getCollection('blog')).sort(
 								<a class="post__link" href={`/blog/${post.slug}`}>
 									<span class="post__date"><FormattedDate date={post.data.pubDate} /></span>
 									<div>
-										<h4 class="post__title">{post.data.title}</h4>
+										<h2 class="post__title">{post.data.title}</h2>
 										<p class="post__description">{post.data.description}</p>
 									</div>
 								</a>
@@ -59,6 +59,10 @@ main {
 	justify-content: center;
   align-items: baseline;
 	flex-direction: column;
+}
+
+.post__link h2 {
+	color: inherit;
 }
 
 .post__link:visited {

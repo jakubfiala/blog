@@ -6,7 +6,7 @@ import { SITE_TITLE } from '../consts';
 	<nav>
 		<h1>
 			<a class="title-link" href="/blog" title={SITE_TITLE}>
-				Jakub&apos;s Notes
+				<span class="hexagram" aria-hidden="true">䷷</span>Jakub&apos;s Notes
 			</a>
 		</h1>
 	</nav>
@@ -15,8 +15,14 @@ import { SITE_TITLE } from '../consts';
 <style>
 	.title-link {
 		color: inherit;
-		display: block;
+		display: flex;
 		text-decoration: none;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.title-link:hover {
+		color: #444;
 	}
 
 	.logo {
@@ -53,5 +59,13 @@ import { SITE_TITLE } from '../consts';
 		.social-links {
 			display: none;
 		}
+	}
+
+	.hexagram {
+		font-size: 0.75em;
+		margin-right: 0.75ch;
+		display: inline-block;
+		line-height: 1;
+		margin-top: -6px;
 	}
 </style>

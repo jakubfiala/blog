@@ -26,6 +26,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				padding: 0.5em;
 				font-size: 18px;
 				line-height: 1.5;
+				text-wrap: pretty;
 			}
 			.title {
 				margin-bottom: 2rem;
@@ -44,6 +45,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.description {
 				margin: 0.5rem auto 0;
+			}
+			.hexagram {
+				text-align: center;
+				margin: 2rem 0;
 			}
 		</style>
 	</head>
@@ -65,12 +70,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							}
 						</div>
 						<h1>{title}</h1>
-						<p class="description">{description}</p>
-						<hr />
 					</div>
 					<slot />
 				</div>
 			</article>
+			<div class="hexagram">䷷</div>
 		</main>
 		<Footer />
 	</body>
