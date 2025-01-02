@@ -75,6 +75,7 @@ code {
 }
 pre {
 	padding: 1rem;
+	text-shadow: none;
 }
 pre > code {
 	all: unset;
