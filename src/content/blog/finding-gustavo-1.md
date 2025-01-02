@@ -1,7 +1,7 @@
 ---
-title: 'Localised Sounds in Google Street View'
+title: 'Street View as a game engine: Localised sounds'
 description: 'Making of "Finding Gustavo" - Chapter 1'
-pubDate: '2024-12-29'
+pubDate: '2025-01-02'
 ---
 
 ![](https://www.fiala.space/assets/img/gustavo/vc.webp)

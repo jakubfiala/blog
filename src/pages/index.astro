@@ -53,11 +53,26 @@ main {
 }
 
 .post__link {
+	text-decoration: none;
 	display: flex;
 	gap: 1rem;
-	text-decoration: none;
 	justify-content: center;
   align-items: baseline;
+	flex-direction: column;
+}
+
+.post__link:visited {
+	color: inherit;
+}
+
+.post__link:hover {
+	color: #444;
+}
+
+@media screen and (min-width: 768px) {
+	.post__link {
+		flex-direction: row;
+	}
 }
 
 .post__title {

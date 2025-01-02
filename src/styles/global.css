@@ -5,9 +5,13 @@ html {
   padding: 0;
 }
 
+body {
+	margin: 0;
+}
+
 main {
 	width: 720px;
-	max-width: calc(100% - 2em);
+	max-width: calc(100% - 1em);
 	margin: auto;
 }
 
@@ -22,7 +26,7 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2em;
 }
 h2 {
 	font-size: 2.441em;
@@ -86,7 +90,7 @@ hr {
 		font-size: 18px;
 	}
 	main {
-		padding: 1em;
+		padding: 0.5em;
 	}
 }
 
