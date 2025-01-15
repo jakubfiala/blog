@@ -110,6 +110,10 @@ summary:hover {
 	text-decoration: underline;
 }
 
+video {
+	max-width: 100%;
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;
@@ -137,4 +141,9 @@ summary:hover {
   width: 100vw;
   z-index: -2;
 	opacity: 0.5;
+}
+*::selection {
+  background-color: yellow;
+  color: black;
+	text-shadow: none;
 }

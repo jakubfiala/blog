@@ -6,7 +6,7 @@ pubDate: '2025-01-02'
 
 ![](https://www.fiala.space/assets/img/gustavo/vc.webp)
 
-*This is the first post in a "Making of" series for my new web-based game, [Finding Gustavo](https://finding-gustavo.quest). In this series, I talk about the various techiques I used to turn Google Street View into a (sort of) game engine. While reading the post, it helps to be somewhat familiar with programming, ideally in JavaScript.*
+*This is the first post in the "Making of" series for my new web-based game, [Finding Gustavo](https://finding-gustavo.quest). In this series, I talk about the various techiques I used to turn Google Street View into a (sort of) game engine. While reading the post, it helps to be somewhat familiar with programming, ideally in JavaScript.*
 
 ---
 
