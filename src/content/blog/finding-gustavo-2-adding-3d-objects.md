@@ -223,7 +223,7 @@ const loadEnv = () => new Promise((resolve, reject) => {
 scene.environment = await loadEnv();
 ```
 
-![](/src/assets/img/mirror.webp)
+![](../../assets/img/mirror.webp)
 
 The reflection is blurry due to the mirror's flat surface (this is an unfortunate issue with equirectangular maps and flat reflective surfaces), but it certainly makes it blend with the environment.
 
@@ -396,7 +396,7 @@ renderer.toneMapping = ACESFilmicToneMapping; // adjust to taste
 
 Here's our truck model without (left) and with (right) tonemapping:
 
-![](/src/assets/img/tonemapping.webp)
+![](../../assets/img/tonemapping.webp)
 
 We can also increase the resolution of the rendered image independent of the canvas' size.
 This is also helpful if we want to support high-DPI screens:
