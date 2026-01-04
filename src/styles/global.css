@@ -46,6 +46,13 @@ aside nav {
     gap: 2rem;
   }
 
+  .home main {
+	grid-column: span 3;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+  }
+
   header, footer {
     grid-column: span 3;
   }
@@ -83,7 +90,6 @@ aside nav {
 }
 
 main {
-	width: 720px;
 	max-width: calc(100% - 1em);
 	margin: auto;
 }

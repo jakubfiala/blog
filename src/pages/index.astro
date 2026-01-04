@@ -12,7 +12,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="home">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
@@ -42,10 +42,6 @@ const posts = (await getCollection('blog')).sort(
 </html>
 
 <style>
-main {
-	width: 960px;
-}
-
 .posts {
 	list-style-type: none;
 	padding: 0;
