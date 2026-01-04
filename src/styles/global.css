@@ -82,11 +82,14 @@ pre > code {
 	font-size: 0.9em;
 }
 blockquote {
-	border-left: 4px solid blue;
+	border-left: 4px solid salmon;
 	padding: 0 20px;
 	margin: 2rem 0;
 	font-size: 1.15em;
 	font-style: italic;
+}
+blockquote code {
+  font-style: normal;
 }
 hr {
 	border: none;
