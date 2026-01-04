@@ -3,10 +3,83 @@ html {
   font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, P052, serif;
   font-size: 16px;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
 	margin: 0;
+	padding: 0 0.5rem;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0 0;
+}
+
+nav ul {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+main nav {
+  margin-bottom: 3rem;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+}
+
+aside nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 700px) 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+
+  header, footer {
+    grid-column: span 3;
+  }
+
+  aside {
+    text-align: right;
+    position: relative;
+    padding-top: 8rem;
+  }
+
+  aside nav {
+    display: block;
+    position: sticky;
+    top: 1rem;
+  }
+
+  main nav {
+    display: none;
+  }
+
+  aside nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    gap: 0.5lh;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    grid-template-columns: 1fr minmax(0, 800px) 1fr;
+    gap: 4rem;
+  }
 }
 
 main {
