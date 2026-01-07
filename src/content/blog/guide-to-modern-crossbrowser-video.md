@@ -4,6 +4,34 @@ description: 'How to encode & play it back in any browser'
 pubDate: '2026-01-05'
 ---
 
+<video autoplay playsinline id="video">
+  <source media="(min-width: 2250px)" type="video/mp4; codecs=hvc1" src="https://search.khora.world/video/splash01.4k.h265.mp4">
+  <source media="(min-width: 2250px)" type="video/mp4; codecs=av01.0.09M.08.0.110.01.01.02.0" src="https://search.khora.world/video/splash01.4k.av1.mp4">
+  <source media="(min-width: 2250px)" type="video/mp4; codecs=avc1.f4.00.20" src="https://search.khora.world/video/splash01.4k.h264.mp4">
+  <source media="(min-width: 2250px)" type="video/webm; codecs=vp9" src="https://search.khora.world/video/splash01.4k.vp9.webm">
+  <source media="(min-width: 1500px)" type="video/mp4; codecs=hvc1" src="https://search.khora.world/video/splash01.2k.h265.mp4">
+  <source media="(min-width: 1500px)" type="video/mp4; codecs=av01.0.09M.08.0.110.01.01.02.0" src="https://search.khora.world/video/splash01.2k.av1.mp4">
+  <source media="(min-width: 1500px)" type="video/mp4; codecs=avc1.f4.00.20" src="https://search.khora.world/video/splash01.2k.h264.mp4">
+  <source media="(min-width: 1500px)" type="video/webm; codecs=vp9" src="https://search.khora.world/video/splash01.2k.vp9.webm">
+  <source media="" type="video/mp4; codecs=hvc1" src="https://search.khora.world/video/splash01.1k.h265.mp4">
+  <source media="" type="video/mp4; codecs=av01.0.09M.08.0.110.01.01.02.0" src="https://search.khora.world/video/splash01.1k.av1.mp4">
+  <source media="" type="video/mp4; codecs=avc1.f4.00.20" src="https://search.khora.world/video/splash01.1k.h264.mp4">
+  <source media="" type="video/webm; codecs=vp9" src="https://search.khora.world/video/splash01.1k.vp9.webm">
+</video>
+<output id="video-source-output" style="font-family: monospace; font-size: 0.75rem;"></output>
+<script is:inline type="text/javascript">
+const video = document.getElementById("video");
+const output = document.getElementById("video-source-output");
+video.addEventListener("canplay", () => {
+  console.log("canplay");
+  const sources = video.childNodes;
+  const currentSource = Array.from(video.childNodes).find(source => source.src === video.currentSrc);
+  if (!currentSource) return;
+  const [size, codec] = currentSource.src.replace("https://search.khora.world/video/splash01.", "").replace(".mp4", "").replace(".webm", "").split(".");
+  output.innerText = `Your browser loaded this video in "${size}" resolution with codec "${codec}" and MIME type "${currentSource.type}"`;
+}, { once: true });
+</script>
+
 Over the past year, I had the pleasure to work on [Khora](https://khora.world), a new platform for exploring philosophy. From the beginning, we wanted Khora to be as visually compelling as possible, reflecting the Platonic ideas behind it. The visuals ended up being a combination of Three.js 3D graphics, GLSL shaders (my personal favourite) and a sprinkling of short video artworks created by artist [Gareth Polmeer](https://garethpolmeer.com/).
 
 Using HTML `<video>` for parts of the experience like the summoned "companion" figures and the background that shimmers whenever Khora is "thinking" or retrieving results was a great help, because I could directly include Gareth's artworks without having to re-interpret them in 3D. To seamlessly integrate the videos into the UI, I decided to simply render the videos with transparency. The workflow was as follows:
